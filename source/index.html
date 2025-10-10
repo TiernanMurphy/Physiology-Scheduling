@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Screen -->
+        <div class="screen active" id="home">
+            <h1>Welcome</h1>
+            <p class="subtitle">Get started by choosing an option below</p>
+            <div class="button-group">
+                <button class="primary-btn" onclick="showScreen('login')">Login</button>
+                <button class="secondary-btn" onclick="showScreen('register')">Register</button>
+            </div>
+        </div>
+
+        <!-- Login Screen -->
+        <div class="screen" id="login">
+            <h1>Login</h1>
+            <p class="subtitle">Enter your credentials to continue</p>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="primary-btn">Login</button>
+            </form>
+            <div class="back-link" onclick="showScreen('home')">← Back to home</div>
+        </div>
+
+        <!-- Registration Survey Screens -->
+        <div class="screen" id="register">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress"></div>
+                </div>
+                <div class="progress-text">Question <span id="current-q">1</span> of 8</div>
+            </div>
+
+            <!-- Question 1: Name -->
+            <div class="survey-question active" data-q="1">
+                <h2 class="question-title">What's your name?</h2>
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Enter your full name" onkeypress="handleEnterKey(event, 'nextQuestion')">
+                </div>
+                <div class="navigation-buttons">
+                    <button class="secondary-btn" onclick="showScreen('home')">Cancel</button>
+                    <button class="primary-btn" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <!-- Question 2: Email -->
+            <div class="survey-question" data-q="2">
+                <h2 class="question-title">What's your email?</h2>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="your.email@example.com" onkeypress="handleEnterKey(event, 'nextQuestion')">
+                </div>
+                <div class="navigation-buttons">
+                    <button class="secondary-btn" onclick="prevQuestion()">Back</button>
+                    <button class="primary-btn" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <!-- Question 3: Major -->
+            <div class="survey-question" data-q="3">
+                <h2 class="question-title">What's your major?</h2>
+                <div class="form-group">
+                    <input type="text" id="major" placeholder="Enter your major" onkeypress="handleEnterKey(event, 'nextQuestion')">
+                </div>
+                <div class="navigation-buttons">
+                    <button class="secondary-btn" onclick="prevQuestion()">Back</button>
+                    <button class="primary-btn" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <!-- Question 4: Minor -->
+            <div class="survey-question" data-q="4">
+                <h2 class="question-title">Do you have a minor?</h2>
+                <div class="form-group">
+                    <input type="text" id="minor" placeholder="Enter your minor (leave blank if none)" onkeypress="handleEnterKey(event, 'nextQuestion')">
+                </div>
+                <div class="navigation-buttons">
+                    <button class="secondary-btn" onclick="prevQuestion()">Back</button>
+                    <button class="primary-btn" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <!-- Question 5: Study Abroad -->
+            <div class="survey-question" data-q="5">
+                <h2 class="question-title">Are you studying abroad?</h2>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="abroad" value="yes"">
+                        Yes
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="abroad" value="no"">
+                        No
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="abroad" value="undecided">
+                        Undecided
+                    </label>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="secondary-btn" onclick="prevQuestion()">Back</button>
+                    <button class="primary-btn" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <!-- Question 6: Career Path -->
+            <div class="survey-question" data-q="6">
+                <h2 class="question-title">What's your career path?</h2>
+                <div class="form-group">
+                    <select id="career" onchange="if(this.value) nextQuestion()">
+                        <option value="">Select a path...</option>
+                        <option value="pre-dental">Pre-Dental</option>
+                        <option value="pre-medicine">Pre-Medicine</option>
+                        <option value="pre-occupational-therapy">Pre-Occupational Therapy</option>
+                        <option value="pre-physical-therapy">Pre-Physical Therapy</option>
+                        <option value="pre-physician-assistant">Pre-Physician Assistant</option>
+                        <option value="undecided">Undecided Pre-Health</option>
+                    </select>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="secondary-btn" onclick="prevQuestion()">Back</button>
+                    <button class="primary-btn" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <!-- Question 7: Clubs/Sports -->
+            <div class="survey-question" data-q="7">
+                <h2 class="question-title">What clubs or sports are you involved in?</h2>
+                <div class="form-group">
+                    <textarea id="clubs" placeholder="Tell us about your extracurricular activities..." onkeypress="handleEnterKey(event, 'nextQuestion')"></textarea>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="secondary-btn" onclick="prevQuestion()">Back</button>
+                    <button class="primary-btn" onclick="nextQuestion()">Next</button>
+                </div>
+            </div>
+
+            <!-- Question 8: Additional Info -->
+            <div class="survey-question" data-q="8">
+                <h2 class="question-title">Anything else I should know about you?</h2>
+                <div class="form-group">
+                    <textarea id="additional" placeholder="Share anything else you'd like us to know..." onkeypress="handleEnterKey(event, 'submitRegistration')"></textarea>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="secondary-btn" onclick="prevQuestion()">Back</button>
+                    <button class="primary-btn" onclick="submitRegistration()">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coursework Recommendations Screen -->
+        <div class="screen" id="coursework">
+            <h1>Your Recommended Coursework</h1>
+            
+            <div id="coursework-content" class="coursework-display"></div>
+            
+            <div class="download-section">
+                <button class="primary-btn" onclick="downloadCoursework()">Download as PDF</button>
+                <button class="secondary-btn" onclick="showScreen('home')">Back to Home</button>
+            </div>
+        </div>
+
+        <!-- Dashboard Screen (Post-Login) -->
+        <div class="screen" id="dashboard">
+            <h1>Welcome Back, <span id="user-name">Student</span>!</h1>
+            
+            <div id="degree-content" class="coursework-display"></div>
+            
+            <div class="download-section">
+                <button class="primary-btn" onclick="downloadDegreeGuide()">Download as PDF</button>
+                <button class="secondary-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

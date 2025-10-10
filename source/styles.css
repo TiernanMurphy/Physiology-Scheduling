@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #002554 0%, #8B0015 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+}
+
+.screen {
+    display: none;
+}
+  
+
+.screen.active {
+    display: block;
+}
+
+.survey-question {
+    display: none;
+}
+
+.survey-question.active {
+    display: block;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #666;
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 14px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+button {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background: #002554;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #001a3d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 37, 84, 0.4);
+}
+
+.secondary-btn {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.secondary-btn:hover {
+    background: #e0e0e0;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #002554;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+.progress-container {
+    margin-bottom: 32px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #002554 0%, #8B0015 100%);
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    text-align: center;
+    margin-top: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.question-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.navigation-buttons button {
+    flex: 1;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #002554;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;  /* changed from column to row */
+    gap: 12px;
+}
+
+.radio-option {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-option:hover {
+    border-color: #002554;
+    background: #f0f5ff;
+}
+
+.radio-option input {
+    display: none;  /* added to hide radio selection circles */
+    margin-right: 8px;
+}
+
+.radio-option.selected {
+    border-color: #002554;
+    background: #f0f5ff;
+}
+
+/* Added this for checked state */
+.radio-option:has(input[type="radio"]:checked) {
+    border-color: #002554;
+    background: #f0f5ff;
+  }
+
+.coursework-display {
+    max-height: 700px;
+    max-width: 1200px;
+    overflow-y: auto;
+    margin: 24px 0;
+}
+
+.coursework-section {
+    margin-bottom: 24px;
+}
+
+.coursework-section h3 {
+    color: #002554;
+    font-size: 18px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #002554;
+    padding-bottom: 8px;
+}
+
+.course-item {
+    margin: 8px 0;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.course-code {
+    font-weight: 600;
+    color: #002554;
+}
+
+.course-credits {
+    color: #666;
+    float: right;
+}
+
+.info-note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 12px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #856404;
+}
+
+.download-section {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.degree-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    border-radius: 8px;
+    overflow: hidden; /* keeps rounded corners */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.degree-table thead {
+    background: linear-gradient(90deg, #002554, #8B0015);
+    color: white;
+    text-align: left;
+}
+
+.degree-table th, 
+.degree-table td {
+    padding: 12px 16px;
+}
+
+.degree-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.degree-table tbody tr:hover {
+    background: #f0f5ff;
+    transition: background 0.2s ease;
+}
+
+.degree-table td:last-child, 
+.degree-table th:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: #002554;
+}
