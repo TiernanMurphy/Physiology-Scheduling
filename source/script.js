@@ -392,6 +392,103 @@ const courseworkData = {
     }
 };
 
+const coreRequirements = {
+    title: "GU Core Curriculum Requirements",
+    intro: "All courses must be completed by undergraduates, ask advisor about AP and/or transfer credits.",
+    sections: [
+        {
+            category: 'Year 1',
+            credits: 18,
+            courses: [
+                {
+                    code: 'DEPT 193',
+                    name: 'First Year Seminar',
+                    credits: 3,
+                    // url: 'https://catalog.gonzaga.edu/courses/engl/'
+                },
+                {
+                    code: 'ENGL 101',
+                    name: 'Writing 101 (Enriched)',
+                    credits: 3,
+                    // url: 'https://catalog.gonzaga.edu/courses/phil/'
+                },
+                {
+                    code: 'PHIL 101',
+                    name: 'Reasoning',
+                    credits: 3,
+                    // url: 'https://catalog.gonzaga.edu/courses/reli/'
+                },
+                {
+                    code: 'COMM 100',
+                    name: 'Communication & Speech',
+                    credits: 3,
+                    // url: 'https://catalog.gonzaga.edu/courses/ucor/'
+                },
+                {
+                    code: 'MATH',
+                    name: 'must be above Math 100 level',
+                    credits: 3,
+                    // url: ''
+                },
+                {
+                    code: 'DEPT 104',
+                    name: 'Scientific Inquiry (Year 1 or 2)',
+                    credits: 3,
+                    // url: ''
+                }
+            ]
+        },
+        {
+            category: 'Year 2',
+            credits: 6,
+            courses: [
+                {
+                    code: 'PHIL 201',
+                    name: 'Philosophy of Human Nature',
+                    credits: 3,
+                    // url: 'https://catalog.gonzaga.edu/undergraduate/core-curriculum/'
+                },
+                {
+                    code: 'RELI',
+                    name: 'World or Comparative Religion',
+                    credits: 3,
+                    // url: 'https://catalog.gonzaga.edu/undergraduate/core-curriculum/'
+                }
+            ]
+        },
+        {
+            category: 'Year 3',
+            credits: 6,
+            courses: [
+                {
+                    code: 'PHIL 301 or RELI Ethics',
+                    name: 'Ethics (philosophy or religion based)',
+                    credits: 3,
+                    // url: 'https://catalog.gonzaga.edu/courses/phil/'
+                },
+                {
+                    code: 'RELI',
+                    name: 'World or Comparative Religion',
+                    credits: 3,
+                    // url: 'https://catalog.gonzaga.edu/courses/reli/'
+                }
+            ]
+        },
+        {
+            category: 'Year 4',
+            credits: 3,
+            courses: [
+                {
+                    code: 'DEPT 492',
+                    name: 'Core Integration Seminar',
+                    credits: 3,
+                    // url: 'https://catalog.gonzaga.edu/courses/phil/'
+                }
+            ]
+        }
+    ]
+};
+
 let currentQuestion = 1;
 const totalQuestions = 8;
 const surveyData = {};
@@ -430,8 +527,8 @@ function submitRegistration() {
 
     document.getElementById("user-name").textContent = userName;
 
-    displayDegreeGuide();
-    showScreen("dashboard");
+    // displayDegreeGuide();
+    // showScreen("dashboard");
 
     // Display coursework based on career path
     let careerPath  = surveyData.career;
@@ -442,7 +539,7 @@ function submitRegistration() {
     }
 
     if (careerPath && courseworkData[careerPath]) {
-        displayCoursework(careerPath);
+        displayCourseworkWithCore(careerPath);
         showScreen('coursework');
     } else {
         alert('Registration submitted! (Data logged to console)');
@@ -529,6 +626,105 @@ function displayCoursework(pathway) {
         `;
     });
     
+    if (data.additional && data.additional.length > 0) {
+        html += `
+            <div class="coursework-section">
+                <h3>Additional Information</h3>
+        `;
+        data.additional.forEach(note => {
+            html += `<div class="info-note">• ${note}</div>`;
+        });
+        html += `</div>`;
+    }
+    
+    content.innerHTML = html;
+}
+
+function displayCourseworkWithCore(pathway) {
+    const content = document.getElementById('coursework-content');
+    
+    // First display core requirements
+    let html = `
+        <!-- Core Requirements Section -->
+        <div class="coursework-section">
+            <h3>${coreRequirements.title}</h3>
+            <p>${coreRequirements.intro}</p>
+        </div>
+    `;
+    
+    // Display each core section
+    coreRequirements.sections.forEach(section => {
+        html += `
+            <div class="coursework-section">
+                <h3>${section.category} (${section.credits} Credits)</h3>
+                <table class="degree-table">
+                    <tbody>
+        `;
+        
+        section.courses.forEach(course => {
+            const courseName = course.url
+                ? `<a href="${course.url}" target="_blank" class="course-link">${course.name}</a>`
+                : course.name;
+            
+            html += `
+                <tr>
+                    <td>${course.code}</td>
+                    <td>${courseName}</td>
+                    <td style="text-align:center">${course.credits}</td>
+                </tr>
+            `;
+        });
+        
+        html += `
+                    </tbody>
+                </table>
+            </div>
+        `;
+    });
+
+    // Add separator between core and career-specific coursework
+    html += `<hr style="margin: 40px 0; border: none; border-top: 3px solid #002554;">`;
+
+    // Now add the career-specific coursework
+    const data = courseworkData[pathway];
+    
+    html += `
+        <div class="coursework-section">
+            <h3>${data.title}</h3>
+            <p>${data.intro}</p>
+        </div>
+    `;
+
+    data.courses.forEach(section => {
+        html += `
+            <div class="coursework-section">
+                <h3>${section.section}</h3>
+                <table class="degree-table">
+                    <tbody>
+        `;
+        
+        section.items.forEach(item => {
+            const courseName = item.url
+                ? `<a href="${item.url}" target="_blank" class="course-link">${item.name}</a>`
+                : item.name;
+
+            html += `
+                <tr>
+                    <td>${item.code || ''}</td>
+                    <td>${courseName}</td>
+                    <td style="text-align:center">${item.credits}</td>
+                </tr>
+            `;
+        });
+        
+        html += `
+                    </tbody>
+                </table>
+            </div>
+        `;
+    });
+    
+    // Add additional information if available
     if (data.additional && data.additional.length > 0) {
         html += `
             <div class="coursework-section">
@@ -691,7 +887,69 @@ function downloadCoursework() {
 
 function displayDegreeGuide() {
     const content = document.getElementById('degree-content');
-    content.innerHTML = `
+
+    let html = `
+        <!-- Core Requirements Section -->
+        <div class="coursework-section">
+            <h3>${coreRequirements.title}</h3>
+            <p>${coreRequirements.intro}</p>
+        </div>
+    `;
+    
+    // Display each core section
+    coreRequirements.sections.forEach(section => {
+        html += `
+            <div class="coursework-section">
+                <h3>${section.category} (${section.credits} Credits)</h3>
+                <table class="degree-table">
+                    <tbody>
+        `;
+        
+        section.courses.forEach(course => {
+            const courseName = course.url
+                ? `<a href="${course.url}" target="_blank" class="course-link">${course.name}</a>`
+                : course.name;
+            
+            html += `
+                <tr>
+                    <td>${course.code}</td>
+                    <td>${courseName}</td>
+                    <td style="text-align:center">${course.credits}</td>
+                </tr>
+            `;
+        });
+        
+        html += `
+                    </tbody>
+                </table>
+            </div>
+        `;
+    });
+
+        // Add total credits
+        html += `
+        <div class="coursework-section">
+            <p style="text-align: right; font-weight: bold; font-size: 16px; color: #002554;">
+                Total Core Credits: ${coreRequirements.totalCredits}
+            </p>
+        </div>
+    `;
+ 
+    // Add additional notes
+    if (coreRequirements.additionalNotes && coreRequirements.additionalNotes.length > 0) {
+        html += `
+            <div class="coursework-section">
+                <h3>Important Notes</h3>
+        `;
+        coreRequirements.additionalNotes.forEach(note => {
+            html += `<div class="info-note">• ${note}</div>`;
+        });
+        html += `</div>`;
+    }
+
+    html += `<hr style="margin: 40px 0; border: none; border-top: 3px solid #002554;">`;
+
+    html += `
         <div class="coursework-section">
             <h3>B.S. Human Physiology Required Courses</h3>
             <p><strong>Science Core, 29 Credits</strong></p>
@@ -795,6 +1053,8 @@ function displayDegreeGuide() {
             </table>
         </div>
     `;
+
+    content.innerHTML = html;
 }
 
 function downloadDegreeGuide() {
