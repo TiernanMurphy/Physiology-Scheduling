@@ -21,6 +21,11 @@ body {
     width: 100%;
     max-width: 500px;
     padding: 40px;
+    transition: max-width 0.3s ease;  /* recently added for smooth transitions */
+}
+
+.container.wide {  /* added this class to widen coursework display */
+    max-width: 1200px;
 }
 
 .screen {
@@ -299,4 +304,24 @@ textarea {
     text-align: center;
     font-weight: bold;
     color: #002554;
+}
+
+.course-link {
+    color: #002554;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.course-link:hover {
+    color: #8B0015;
+    border-bottom: 1px solid #8B0015;
+}
+
+.course-link:visited {
+    color: #002554;
+}
+
+.course-link:visited:hover {
+    color: #8B0015;
 }

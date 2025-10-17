@@ -6,18 +6,54 @@ const courseworkData = {
             {
                 section: '3 Semesters of Biology, including 2 with Lab',
                 items: [
-                    { code: 'BIOL 105/L', name: 'Info Flow in Biological Systems with lab', credits: 4, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms' },
-                    { code: 'BIOL 106', name: 'Energy Flow in Biological Systems', credits: 3, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required' },
-                    { code: '', name: '1 additional Semester with lab – consult specific dental school requirements', credits: 4 }
+                    {
+                        code: 'BIOL 105/L',
+                        name: 'Info Flow in Biological Systems with lab',
+                        credits: 4, 
+                        notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    },
+                    {
+                        code: 'BIOL 106',
+                        name: 'Energy Flow in Biological Systems',
+                        credits: 3,
+                        notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    },
+                    {
+                        code: '',
+                        name: '1 additional Semester with lab – consult specific dental school requirements',
+                        credits: 4
+                    }
                 ]
             },
             {
                 section: '4 Semesters of Chemistry',
                 items: [
-                    { code: 'CHEM 101/L', name: 'General Chemistry with lab', credits: 4, notes: 'May only be offered in certain terms' },
-                    { code: 'CHEM 230/L', name: 'Organic Chemistry I with lab', credits: 5, notes: 'May only be offered in certain terms, Pre-requisite required' },
-                    { code: 'CHEM 231/L', name: 'Organic Chemistry II with lab', credits: 4, notes: 'May only be offered in certain terms, Pre-requisite required' },
-                    { code: 'CHEM 245/L', name: 'Biochemistry with lab', credits: 4, notes: 'May only be offered in certain terms, Pre-requisite required' }
+                    {
+                        code: 'CHEM 101/L',
+                        name: 'General Chemistry with lab',
+                        credits: 4,
+                        notes: 'May only be offered in certain terms'
+                    },
+                    {
+                        code: 'CHEM 230/L',
+                        name: 'Organic Chemistry I with lab',
+                        credits: 5,
+                        notes: 'May only be offered in certain terms, Pre-requisite required'
+                    },
+                    {
+                        code: 'CHEM 231/L',
+                        name: 'Organic Chemistry II with lab',
+                        credits: 4,
+                        notes: 'May only be offered in certain terms, Pre-requisite required'
+                    },
+                    {
+                        code: 'CHEM 245/L',
+                        name: 'Biochemistry with lab',
+                        credits: 4,
+                        notes: 'May only be offered in certain terms, Pre-requisite required'
+                    }
                 ]
             },
             {
@@ -47,9 +83,27 @@ const courseworkData = {
             {
                 section: '3 Semesters of Biology',
                 items: [
-                    { code: 'BIOL 105/L', name: 'Info Flow in Biological Systems with lab', credits: 4, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms' },
-                    { code: 'BIOL 106', name: 'Energy Flow in Biological Systems', credits: 3, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required' },
-                    { code: 'BIOL 207/L', name: 'Genetics with lab', credits: 4, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required' }
+                    {
+                        code: 'BIOL 105/L',
+                        name: 'Info Flow in Biological Systems with lab',
+                        credits: 4,
+                        notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    },
+                    {
+                        code: 'BIOL 106',
+                        name: 'Energy Flow in Biological Systems',
+                        credits: 3,
+                        notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    },
+                    {
+                        code: 'BIOL 207/L',
+                        name: 'Genetics with lab',
+                        credits: 4,
+                        notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    }
                 ]
             },
             {
@@ -89,7 +143,13 @@ const courseworkData = {
             {
                 section: '1 Semester of Biology',
                 items: [
-                    { code: 'BIOL 105/L', name: 'Info Flow in Biological Systems with lab', credits: 4, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms' }
+                    {
+                        code: 'BIOL 105/L',
+                        name: 'Info Flow in Biological Systems with lab',
+                        credits: 4,
+                        notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    }
                 ]
             },
             {
@@ -145,8 +205,20 @@ const courseworkData = {
             {
                 section: '2 Semesters of Biology',
                 items: [
-                    { code: 'BIOL 105/L', name: 'Info Flow in Biological Systems with lab', credits: 4, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms' },
-                    { code: 'BIOL 170/L', name: 'Microbiology with lab', credits: 4, notes: 'May only be offered in certain terms, Pre-requisite required' }
+                    {
+                        code: 'BIOL 105/L',
+                        name: 'Info Flow in Biological Systems with lab',
+                        credits: 4,
+                        notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    },
+                    {
+                        code: 'BIOL 170/L',
+                        name: 'Microbiology with lab',
+                        credits: 4,
+                        notes: 'May only be offered in certain terms, Pre-requisite required',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    }
                 ]
             },
             {
@@ -196,10 +268,33 @@ const courseworkData = {
             {
                 section: '4 Semesters of Biology',
                 items: [
-                    { code: 'BIOL 105/L', name: 'Info Flow in Biological Systems with lab', credits: 4, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms' },
-                    { code: 'BIOL 106', name: 'Energy Flow in Biological Systems', credits: 3, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required' },
-                    { code: 'BIOL 170/L or BIOL 370/L', name: 'Introduction to Microbiology or Microbiology with lab', credits: 4, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required' },
-                    { code: 'BIOL 207/L', name: 'Genetics with Lab', credits: 4, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required' }
+                    { 
+                        code: 'BIOL 105/L',
+                        name: 'Info Flow in Biological Systems with lab',
+                        credits: 4,
+                        notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    },
+                    {
+                        code: 'BIOL 106',
+                        name: 'Energy Flow in Biological Systems',
+                        credits: 3, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    },
+                    { 
+                        code: 'BIOL 170/L or BIOL 370/L',
+                        name: 'Introduction to Microbiology or Microbiology with lab',
+                        credits: 4,
+                        notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    },
+                    {
+                        code: 'BIOL 207/L',
+                        name: 'Genetics with Lab',
+                        credits: 4,
+                        notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    }
                 ]
             },
             {
@@ -250,8 +345,20 @@ const courseworkData = {
             {
                 section: '2 Semesters of Biology',
                 items: [
-                    { code: 'BIOL 105/L', name: 'Info Flow in Biological Systems with lab', credits: 4, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms' },
-                    { code: 'BIOL 106', name: 'Energy Flow in Biological Systems', credits: 3, notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required' }
+                    {
+                        code: 'BIOL 105/L', 
+                        name: 'Info Flow in Biological Systems with lab', 
+                        credits: 4, 
+                        notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    },
+                    { 
+                        code: 'BIOL 106',
+                        name: 'Energy Flow in Biological Systems',
+                        credits: 3,
+                        notes: 'Course Authorization Required if not in BIOL major or minor, May only be offered in certain terms, Pre-requisite required',
+                        url: 'https://catalog.gonzaga.edu/courses/biol/'
+                    }
                 ]
             },
             {
@@ -292,6 +399,15 @@ const surveyData = {};
 function showScreen(screenId) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     document.getElementById(screenId).classList.add('active');
+
+    const container = document.querySelector('.container');
+
+    // make container wider for coursework and dashboard screens
+    if (screenId === 'coursework' || screenId === 'dashboard') {
+        container.classList.add('wide');
+    } else {
+        container.classList.remove('wide');
+    }
     
     if (screenId === 'register') {
         currentQuestion = 1;
@@ -316,8 +432,23 @@ function submitRegistration() {
 
     displayDegreeGuide();
     showScreen("dashboard");
-}
 
+    // Display coursework based on career path
+    let careerPath  = surveyData.career;
+
+    // Treat "other" as "undecided"
+    if (careerPath === "other") {
+        careerPath = "undecided";
+    }
+
+    if (careerPath && courseworkData[careerPath]) {
+        displayCoursework(careerPath);
+        showScreen('coursework');
+    } else {
+        alert('Registration submitted! (Data logged to console)');
+        showScreen('home');
+    }
+}
 
 function showQuestion(questionNum) {
     document.querySelectorAll('.survey-question').forEach(q => q.classList.remove('active'));
@@ -358,34 +489,6 @@ function saveCurrentAnswer() {
     }
 }
 
-function submitRegistration() {
-    saveCurrentAnswer();
-    
-    const userName = surveyData.name?.trim() || "Student";
-
-    // store as logged in
-    loggedInUser = {
-        name: userName,
-        email: surveyData.email || "example@zagmail.com",
-        ...surveyData
-    };
-
-    document.getElementById("user-name").textContent = userName;
-
-    displayDegreeGuide();
-    showScreen("dashboard");
-    
-    // Display coursework based on career path
-    const careerPath = surveyData.career;
-    if (careerPath && courseworkData[careerPath]) {
-        displayCoursework(careerPath);
-        showScreen('coursework');
-    } else {
-        alert('Registration submitted! (Data logged to console)');
-        showScreen('home');
-    }
-}
-
 function displayCoursework(pathway) {
     const data = courseworkData[pathway];
     const content = document.getElementById('coursework-content');
@@ -406,10 +509,14 @@ function displayCoursework(pathway) {
         `;
         
         section.items.forEach(item => {
+            const courseName = item.url
+                ? `<a href="${item.url}" target="_blank" class="course-link">${item.name}</a>`
+                : item.name;
+
             html += `
                 <tr>
                     <td>${item.code || ''}</td>
-                    <td>${item.name}</td>
+                    <td>${courseName}</td>
                     <td style="text-align:center">${item.credits}</td>
                 </tr>
             `;
@@ -437,46 +544,149 @@ function displayCoursework(pathway) {
 }
 
 
-
 function downloadCoursework() {
-    const pathway = surveyData.career;
-    if (!pathway || !courseworkData[pathway]) return;
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
     
-    const data = courseworkData[pathway];
-    let pdfContent = `${data.title}\n\n`;
-    pdfContent += `${data.intro}\n\n`;
+    const userName = document.getElementById("user-name").textContent;
+    const email = loggedInUser ? loggedInUser.email : "N/A";
     
-    data.courses.forEach(section => {
-        pdfContent += `${section.section}\n`;
-        section.items.forEach(item => {
-            pdfContent += `  ${item.code ? item.code + ': ' : ''}${item.name} (${item.credits} credits)\n`;
-            if (item.notes) pdfContent += `    ${item.notes}\n`;
+    // Header with background
+    doc.setFillColor(0, 37, 84);
+    doc.rect(0, 0, 210, 30, 'F');
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(20);
+    doc.text("Recommended Coursework", 105, 18, { align: 'center' });
+    
+    // Student info
+    doc.setTextColor(0, 0, 0);
+    doc.setFontSize(10);
+    doc.text(`Student: ${userName}`, 14, 40);
+    doc.text(`Email: ${email}`, 14, 45);
+    doc.text(`Generated: ${new Date().toLocaleDateString()}`, 14, 50);
+    
+    doc.line(14, 55, 196, 55);
+    
+    let yPos = 65;
+    
+    // Get coursework content
+    const contentElement = document.getElementById("coursework-content");
+    
+    if (contentElement) {
+        const sections = contentElement.querySelectorAll('.coursework-section');
+        
+        sections.forEach((section, index) => {
+            const heading = section.querySelector('h3');
+            const paragraph = section.querySelector('p');
+            const table = section.querySelector('table');
+            const notes = section.querySelectorAll('.info-note');
+            
+            // Title section (first section only)
+            if (index === 0 && heading && paragraph) {
+                doc.setFontSize(16);
+                doc.setFont(undefined, 'bold');
+                doc.setTextColor(0, 37, 84);
+                doc.text(heading.innerText, 105, yPos, { align: 'center' });
+                yPos += 10;
+                
+                doc.setFontSize(10);
+                doc.setFont(undefined, 'normal');
+                doc.setTextColor(0, 0, 0);
+                const splitPara = doc.splitTextToSize(paragraph.innerText, 182);
+                doc.text(splitPara, 14, yPos);
+                yPos += (splitPara.length * 5) + 10;
+            }
+            // Course sections with tables
+            else if (heading && table) {
+                // Check if we need a new page
+                if (yPos > 240) {
+                    doc.addPage();
+                    yPos = 20;
+                }
+                
+                // Add section heading
+                doc.setFontSize(12);
+                doc.setFont(undefined, 'bold');
+                doc.setTextColor(0, 37, 84);
+                doc.text(heading.innerText, 14, yPos);
+                yPos += 8;
+                
+                // Extract table data
+                const rows = table.querySelectorAll('tr');
+                const tableData = [];
+                
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll('td');
+                    if (cells.length >= 3) {
+                        tableData.push([
+                            cells[0].innerText.trim() || '',
+                            cells[1].innerText.trim() || '',
+                            cells[2].innerText.trim() || ''
+                        ]);
+                    }
+                });
+                
+                // Use autoTable for clean formatting
+                if (tableData.length > 0) {
+                    doc.autoTable({
+                        startY: yPos,
+                        head: [['Course Code', 'Course Name', 'Credits']],
+                        body: tableData,
+                        theme: 'striped',
+                        headStyles: { 
+                            fillColor: [0, 37, 84], 
+                            textColor: 255,
+                            fontSize: 9
+                        },
+                        margin: { left: 14, right: 14 },
+                        styles: { 
+                            fontSize: 9,
+                            cellPadding: 3
+                        },
+                        columnStyles: {
+                            0: { cellWidth: 35 },
+                            1: { cellWidth: 'auto' },
+                            2: { cellWidth: 20, halign: 'center' }
+                        }
+                    });
+                    yPos = doc.lastAutoTable.finalY + 10;
+                }
+            }
+            // Additional Information section
+            else if (notes.length > 0) {
+                // Check if we need a new page
+                if (yPos > 230) {
+                    doc.addPage();
+                    yPos = 20;
+                }
+                
+                doc.setFontSize(12);
+                doc.setFont(undefined, 'bold');
+                doc.setTextColor(0, 37, 84);
+                doc.text('Additional Information:', 14, yPos);
+                yPos += 8;
+                
+                doc.setFontSize(9);
+                doc.setFont(undefined, 'normal');
+                doc.setTextColor(0, 0, 0);
+                
+                notes.forEach(note => {
+                    if (yPos > 270) {
+                        doc.addPage();
+                        yPos = 20;
+                    }
+                    const splitNote = doc.splitTextToSize(note.innerText, 182);
+                    doc.text(splitNote, 14, yPos);
+                    yPos += (splitNote.length * 4) + 4;
+                });
+            }
         });
-        pdfContent += `\n`;
-    });
-    
-    if (data.additional && data.additional.length > 0) {
-        pdfContent += `Additional Information:\n`;
-        data.additional.forEach(note => {
-            pdfContent += `• ${note}\n`;
-        });
-        pdfContent += `\n`;
+    } else {
+        doc.text("No coursework content found", 14, yPos);
     }
     
-    pdfContent += `Important Notes:\n`;
-    pdfContent += `• This information is subject to change. Confirm with the course catalog, ZagWeb, and/or your academic advisor.\n`;
-    pdfContent += `• Use this as a guide and work with your faculty advisor and Academic Advising & Assistance.\n`;
-    pdfContent += `• Last Updated: 12.07.21 | Health Professions Pathways Program | h3p@gonzaga.edu | www.gonzaga.edu/h3p\n`;
-    
-    const blob = new Blob([pdfContent], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${pathway}-coursework.txt`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    // Save as pdf
+    doc.save(`recommended_coursework.pdf`);
 }
 
 function displayDegreeGuide() {
@@ -489,37 +699,37 @@ function displayDegreeGuide() {
             <tbody>
                 <tr>
                     <td>BIOL 105/L</td>
-                    <td>Biological Systems & Lab</td>
+                    <td><a href="https://catalog.gonzaga.edu/courses/biol/" target="_blank" class="course-link">Biological Systems & Lab</a></td>
                     <td>4</td>
                 </tr>
                 <tr>
                     <td>CHEM 101/L</td>
-                    <td>Chemistry & Lab</td>
+                    <td><a href="https://catalog.gonzaga.edu/undergraduate/arts-sciences/chemistry-biochemistry/#coursestext" target="_blank" class="course-link">Chemistry & Lab</a></td>
                     <td>4</tr>
                 </tr>
                 <tr>
                     <td>CHEM 230/L</td>
-                    <td>Organic Chem & Lab</td>
+                    <td><a href="https://catalog.gonzaga.edu/undergraduate/arts-sciences/chemistry-biochemistry/#coursestext" target="_blank" class="course-link">Organic Chem & Lab</a></td>
                     <td>5</td>
                 </tr>
                 <tr>
                     <td>PSYC 101</td>
-                    <td>Psychology</td>
+                    <td><a href="https://catalog.gonzaga.edu/undergraduate/arts-sciences/psychology/#coursestext" target="_blank" class="course-link">Psychology</a></td>
                     <td>3</td>
                 </tr>
                 <tr>
                     <td>MATH 148</td>
-                    <td>Survey of Calculus</td>
+                    <td><a href="https://catalog.gonzaga.edu/undergraduate/arts-sciences/mathematics/#coursestext" target="_blank" class="course-link">Survey of Calculus</a></td>
                     <td>3</td>
                 </tr>
                 <tr>
                     <td>PHYS 101/L</td>
-                    <td>Physics I & Lab</td>
+                    <td><a href="https://catalog.gonzaga.edu/programs/physics-bs/" target="_blank" class="course-link">Physics I & Lab</a></td>
                     <td>5</td>
                 </tr>
                 <tr>
                     <td>PHYS 102/L</td>
-                    <td>Physics II & Lab</td>
+                    <td><a href="https://catalog.gonzaga.edu/programs/physics-bs/" target="_blank" class="course-link">Physics II & Lab</a></td>
                     <td>5</td>
                 </tr>
                 </tbody>
@@ -529,27 +739,27 @@ function displayDegreeGuide() {
             <tbody>
                 <tr>
                     <td>HPHY 205</td>
-                    <td>Exp. Research</td>
+                    <td><a href="https://www.gonzaga.edu/school-of-health-sciences/departments/human-physiology/courses" target="_blank" class="course-link">Exp. Research</a></td>
                     <td>3</td>
                 </tr>
                 <tr>
                     <td>HPHY 210</td>
-                    <td>Scientific Writing</td>
+                    <td><a href="https://www.gonzaga.edu/school-of-health-sciences/departments/human-physiology/courses" target="_blank" class="course-link">Scientific Writing</a></td>
                     <td>3</tr>
                 </tr>
                 <tr>
                     <td>HPHY 241/L</td>
-                    <td>Anatomy & Physiology 1 (Course & Lab)</td>
+                    <td><a href="https://www.gonzaga.edu/school-of-health-sciences/departments/human-physiology/courses" target="_blank" class="course-link">Anatomy & Physiology 1 (Course & Lab)</a></td>
                     <td>4</td>
                 </tr>
                 <tr>
                     <td>HPHY 242/L</td>
-                    <td>Anatomy & Physiology 2 (Course & Lab)</td>
+                    <td><a href="https://www.gonzaga.edu/school-of-health-sciences/departments/human-physiology/courses" target="_blank" class="course-link">Anatomy & Physiology 2 (Course & Lab)</a></td>
                     <td>4</td>
                 </tr>
                 <tr>
                     <td>HPHY 274</td>
-                    <td>Human Kinetics</td>
+                    <td><a href="https://www.gonzaga.edu/school-of-health-sciences/departments/human-physiology/courses" target="_blank" class="course-link">Human Kinetics</a></td>
                     <td>3</td>
                 </tbody>
             </table>
@@ -558,43 +768,147 @@ function displayDegreeGuide() {
             <tbody>
                 <tr>
                     <td>HPHY 375/L</td>
-                    <td>Biomechanics & Lab</td>
+                    <td><a href="https://www.gonzaga.edu/school-of-health-sciences/departments/human-physiology/courses" target="_blank" class="course-link">Biomechanics & Lab</a></td>
                     <td>4</td>
                 </tr>
                 <tr>
                     <td>HPHY 376/L</td>
-                    <td>Exercise Physiology & Lab</td>
+                    <td><a href="https://www.gonzaga.edu/school-of-health-sciences/departments/human-physiology/courses" target="_blank" class="course-link">Exercise Physiology & Lab</a></td>
                     <td>4</tr>
                 </tr>
                 <tr>
                     <td>HPHY 441L</td>
-                    <td>Guided Experimental Design</td>
+                    <td><a href="https://www.gonzaga.edu/school-of-health-sciences/departments/human-physiology/courses" target="_blank" class="course-link">Guided Experimental Design</a></td>
                     <td>5</td>
                 </tr>
                 <tr>
                     <td>HPHY 442L</td>
-                    <td>Guided Research</td>
+                    <td><a href="https://www.gonzaga.edu/school-of-health-sciences/departments/human-physiology/courses" target="_blank" class="course-link">Guided Research</a></td>
                     <td>3</td>
                 </tr>
                 <tr>
                     <td>HPHY 499</td>
-                    <td>Culminating Experience</td>
+                    <td><a href="https://www.gonzaga.edu/school-of-health-sciences/departments/human-physiology/courses" target="_blank" class="course-link">Culminating Experience</a></td>
                     <td>3</td>
-                </tr>
-                <tr>
-                    <td>PHYS 101/L</td>
-                    <td>Physics I & Lab</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>PHYS 102/L</td>
-                    <td>Physics II & Lab</td>
-                    <td>5</td>
                 </tr>
                 </tbody>
             </table>
         </div>
     `;
+}
+
+function downloadDegreeGuide() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    
+    // Add title
+    doc.setFontSize(18);
+    doc.setTextColor(0, 37, 84);  // Gonzaga blue
+    doc.text('B.S. Human Physiology Required Courses', 105, 20, { align: 'center' });
+    
+    let yPos = 35;
+    
+    // Science Core Section
+    doc.setFontSize(14);
+    doc.setTextColor(0, 37, 84);
+    doc.text('Science Core - 29 Credits', 14, yPos);
+    yPos += 8;
+    
+    doc.autoTable({
+        startY: yPos,
+        head: [['Course Code', 'Course Name', 'Credits']],
+        body: [
+            ['BIOL 105/L', 'Biological Systems & Lab', '4'],
+            ['CHEM 101/L', 'Chemistry & Lab', '4'],
+            ['CHEM 230/L', 'Organic Chem & Lab', '5'],
+            ['PSYC 101', 'Psychology', '3'],
+            ['MATH 148', 'Survey of Calculus', '3'],
+            ['PHYS 101/L', 'Physics I & Lab', '5'],
+            ['PHYS 102/L', 'Physics II & Lab', '5']
+        ],
+        theme: 'striped',
+        headStyles: { fillColor: [0, 37, 84], textColor: 255 },
+        margin: { left: 14, right: 14 },
+        styles: { fontSize: 10 }
+    });
+    
+    yPos = doc.lastAutoTable.finalY + 12;
+    
+    // Lower Division Section
+    doc.setFontSize(14);
+    doc.setTextColor(0, 37, 84);
+    doc.text('Lower Division - 17 Credits', 14, yPos);
+    yPos += 8;
+    
+    doc.autoTable({
+        startY: yPos,
+        head: [['Course Code', 'Course Name', 'Credits']],
+        body: [
+            ['HPHY 205', 'Exp. Research', '3'],
+            ['HPHY 210', 'Scientific Writing', '3'],
+            ['HPHY 241/L', 'Anatomy & Physiology 1 (Course & Lab)', '4'],
+            ['HPHY 242/L', 'Anatomy & Physiology 2 (Course & Lab)', '4'],
+            ['HPHY 274', 'Human Kinetics', '3']
+        ],
+        theme: 'striped',
+        headStyles: { fillColor: [0, 37, 84], textColor: 255 },
+        margin: { left: 14, right: 14 },
+        styles: { fontSize: 10 }
+    });
+    
+    yPos = doc.lastAutoTable.finalY + 12;
+    
+    // Upper Division Section
+    doc.setFontSize(14);
+    doc.setTextColor(0, 37, 84);
+    doc.text('Upper Division - 23 Credits', 14, yPos);
+    yPos += 8;
+    
+    doc.autoTable({
+        startY: yPos,
+        head: [['Course Code', 'Course Name', 'Credits']],
+        body: [
+            ['HPHY 375/L', 'Biomechanics & Lab', '4'],
+            ['HPHY 376/L', 'Exercise Physiology & Lab', '4'],
+            ['HPHY 441L', 'Guided Experimental Design', '5'],
+            ['HPHY 442L', 'Guided Research', '3'],
+            ['HPHY 499', 'Culminating Experience', '3']
+        ],
+        theme: 'striped',
+        headStyles: { fillColor: [0, 37, 84], textColor: 255 },
+        margin: { left: 14, right: 14 },
+        styles: { fontSize: 10 }
+    });
+    
+    yPos = doc.lastAutoTable.finalY + 12;
+    
+    // Total Credits
+    doc.setFontSize(12);
+    doc.setFont(undefined, 'bold');
+    doc.text('Total Credits: 69', 14, yPos);
+    yPos += 10;
+    
+    // Important Notes
+    doc.setFontSize(11);
+    doc.setFont(undefined, 'bold');
+    doc.text('Important Notes:', 14, yPos);
+    yPos += 6;
+    
+    doc.setFont(undefined, 'normal');
+    doc.setFontSize(9);
+    const notes = [
+        '• This information is subject to change. Confirm with the course catalog, ZagWeb,',
+        '  and/or your academic advisor.',
+        '• Use this as a guide and work with your faculty advisor and Academic Advising',
+        '  & Assistance.'
+    ];
+    
+    notes.forEach(note => {
+        doc.text(note, 14, yPos);
+        yPos += 5;
+    });
+    
+    doc.save('required_courses.pdf');
 }
 
 
@@ -636,3 +950,24 @@ document.addEventListener('change', function(e) {
         e.target.closest('.radio-option').classList.add('selected');
     }
 });
+
+function logout() {
+    // Clear user data
+    loggedInUser = null;
+
+    // Clear survey data if needed
+    Object.keys(surveyData).forEach(key => delete surveyData[key]);
+
+    // Reset username
+    document.getElementById('user-name').textContent = 'Student';
+
+    // Return to home screen
+    showScreen('home');
+
+    // Reattach login listener if needed
+    const loginForm = document.getElementById('login-form');
+    if (loginForm) {
+        loginForm.removeEventListener('submit', handleLogin);  // Remove old listener
+        loginForm.addEventListener('submit', handleLogin);  // Add fresh listener
+    }
+}
